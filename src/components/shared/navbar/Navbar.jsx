@@ -26,6 +26,10 @@ const navLinks = [
     name: "Pricing",
     href: "/allRoute/pricing",
   },
+  {
+    name: "dashboard",
+    href: "/allRoute/dashboard",
+  },
 ];
 
 const Navbar = () => {
