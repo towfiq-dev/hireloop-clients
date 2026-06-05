@@ -1,11 +1,15 @@
-import React from 'react';
+'use client'
+import CompaniesForm from "@/components/allNavPage/dashboard/companiesForm/CompaniesForm";
+import { authClient } from "@/lib/auth-client";
 
-const CompanyPage = () => {
+
+export default function RegisterCompanyPage() {
+  const { data: session, isPending } = authClient.useSession();
+    const user = session?.user;
+  
   return (
     <div>
-      CompanyPage
+      <CompaniesForm recruiter= {user}/>
     </div>
   );
-};
-
-export default CompanyPage;
+}

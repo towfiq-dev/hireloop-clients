@@ -7,16 +7,17 @@ const DashboardSidebar = () => {
     { icon: House, href:'/allRoute/dashboard/recruiter', label: "Home" },
     { icon: Magnifier, href:'/allRoute/dashboard/recruiter/jobs', label: "Jobs" },
     { icon: Bell, href:'/allRoute/dashboard/recruiter/jobs/new', label: "Create A Jobs" },
-    { icon: Envelope, label: "Messages" },
-    { icon: Person, label: "Profile" },
-    { icon: Gear, label: "Settings" },
+    { icon: Bell, href:'/allRoute/dashboard/recruiter/company', label: "Company Profile" },
+    { icon: Envelope, href:'/allRoute/dashboard/recruiter/message', label: "Messages" },
+    { icon: Person, href:'/allRoute/dashboard/recruiter/profile', label: "Profile" },
+    { icon: Gear, href:'/allRoute/dashboard/recruiter/settings', label: "Settings" },
   ];
 
   const navContent = 
                 <nav className="flex flex-col gap-1">
                   {navItems.map((item) => (
                     <Link
-                      href={item.label}
+                      href={item.href}
                       key={item.label}
                       className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-default"
                       type="button"

@@ -60,15 +60,6 @@ const DashboardForm = ({ mockCompany }) => {
       isPubliclyVisible: true,
     };
 
-    //console.log('Submitted job payload:', payload);
-    // const res = await createJob(payload);
-    // if (res.insertedId) {
-    //     toast.success("Job posted successfully!");
-    //     e.target.reset();
-    //     setIsRemote(false);
-    //     redirect("/dashboard/recruiter/jobs");
-    // }
-
     const res = await createJobs(payload)
     if (res.insertedId) {
       toast.success('Your job post successfully')
